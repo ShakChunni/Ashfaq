@@ -1,8 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/header";
-import PageTransition from "@/components/ui/pageTransition";
-import StairTransition from "@/components/ui/stairTransition";
+import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 import { Weight } from "lucide-react";
 
 const JetBrainsMono = JetBrains_Mono({

@@ -2,18 +2,20 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 const pageTransition = ({ children }) => {
-  const usePathname = usePathname();
+  const pathName = usePathname();
 
   return (
     <AnimatePresence>
-      <div>
+      <div key={pathName}>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 1 }}
+          animate={{
+            opacity: 0,
+            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
+          }}
           exit={{ opacity: 0 }}
-        >
-          {" "}
-        </motion.div>
+          className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
+        />
 
         {children}
       </div>

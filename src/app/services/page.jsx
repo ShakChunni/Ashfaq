@@ -1,3 +1,5 @@
+"use client";
+
 const Services = () => {
   return <div>services page</div>;
 };
